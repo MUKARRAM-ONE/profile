@@ -141,22 +141,22 @@ export default function Page() {
               <ProjectCard
                 title="TypeScript"
                 description="Currently building a solid understanding of TypeScript, focusing on its fundamental concepts such as types, interfaces, and basic syntax, and eager to apply this knowledge to real-world projects."
-                image="/typescript-project.png"
-                link="#"
+                type="typescript"
+                link="https://github.com/MUKARRAM-ONE/typescript-projects"
                 tags={["TypeScript", "Web Development"]}
               />
               <ProjectCard
                 title="Java Currency Converter"
                 description="Developed a basic currency converter application using Java, designed to convert predefined currency values (e.g., USD to EUR) without fetching real-time data. This project helped solidify my understanding of Java fundamentals."
-                image="/java-project.png"
-                link="#"
+                type="java"
+                link="https://github.com/MUKARRAM-ONE/java-currency-converter"
                 tags={["Java", "OOP", "Desktop Application"]}
               />
               <ProjectCard
                 title="Portfolio Website"
                 description="Created a neutral and responsive portfolio website using HTML and CSS, allowing users to easily input and display their personal information in a structured format."
-                image="/portfolio-project.png"
-                link="#"
+                type="web"
+                link="https://github.com/MUKARRAM-ONE/profile"
                 tags={["HTML", "CSS", "Responsive Design"]}
               />
             </div>
