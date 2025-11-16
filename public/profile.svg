@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <defs>
+    <linearGradient id="g1" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="50%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <filter id="f1" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="b"/>
+      <feBlend in="SourceGraphic" in2="b" mode="normal"/>
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#g1)"/>
+  <g transform="translate(400,400)">
+    <circle r="300" fill="#ffffff" opacity="0.06"/>
+    <circle r="260" fill="url(#g1)" filter="url(#f1)"/>
+    <circle r="240" fill="#fff" opacity="0.06"/>
+    <text x="0" y="20" font-family="Inter, Arial, sans-serif" font-size="160" font-weight="700" fill="#ffffff" text-anchor="middle" dominant-baseline="middle">MR</text>
+  </g>
+</svg>
