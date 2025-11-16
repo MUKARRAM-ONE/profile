@@ -25,7 +25,7 @@ title: 'Portfolio Website (this site)',
 short: 'Next.js + TypeScript + Tailwind portfolio site.',
 long: `A fast, accessible portfolio built with Next.js App Router, TypeScript and Tailwind. Focus on SEO, minimalism and performance. Includes project pages and blog posts authored in a small data layer.`,
 tags: ['Next.js','TypeScript','Tailwind'],
-link: '/',
+link: 'https://www.mukarramrazzaq.me/',
 date: '2025-06-01'
 },
 {
