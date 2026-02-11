@@ -1,6 +1,11 @@
 import ContactForm from '../../components/ContactForm';
 import { Mail, Github, Linkedin, Send, MessageSquare } from 'lucide-react';
 
+export const metadata = {
+  title: 'Contact | Mukarram Razzaq',
+  description: 'Get in touch for new projects, creative ideas, or opportunities to collaborate.',
+};
+
 export default function Contact() {
   return (
     <section className="py-20 md:py-32">

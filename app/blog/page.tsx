@@ -2,6 +2,11 @@ import { posts } from '../../data/posts';
 import PostCard from '../../components/PostCard';
 import { BookOpen } from 'lucide-react';
 
+export const metadata = {
+  title: 'Blog | Mukarram Razzaq',
+  description: 'Exploring the intersection of AI, cloud architecture, and modern software engineering.',
+};
+
 export default function Blog() {
   return (
     <section className="py-20 md:py-32">

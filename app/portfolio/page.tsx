@@ -2,6 +2,11 @@ import { projects } from '../../data/projects';
 import ProjectCard from '../../components/ProjectCard';
 import { Briefcase } from 'lucide-react';
 
+export const metadata = {
+  title: 'Portfolio | Mukarram Razzaq',
+  description: 'Selected works spanning cloud architecture, AI integration, and full-stack development.',
+};
+
 export default function Portfolio() {
   return (
     <section className="py-20 md:py-32">

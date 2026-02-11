@@ -1,6 +1,11 @@
 import React from 'react';
 import { GraduationCap, BookOpen, Award, CheckCircle2, Calendar, MapPin, Cpu } from 'lucide-react';
 
+export const metadata = {
+  title: 'Education | Mukarram Razzaq',
+  description: 'Academic background and learning journey in software engineering, AI, and cloud technologies.',
+};
+
 export default function Education() {
   const education = {
     degree: "Bachelor of Science in Software Engineering",
