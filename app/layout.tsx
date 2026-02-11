@@ -1,7 +1,7 @@
 import './globals.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-
+import ScrollReveal from '../components/ScrollReveal';
 
 export const metadata = {
 	title: 'Mukarram Razzaq — Developer',
@@ -23,10 +23,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 				<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
 				<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 				<link rel="manifest" href="/site.webmanifest" />
+				<link rel="preconnect" href="https://fonts.googleapis.com" />
+				<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+				<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 			</head>
-			<body>
+			<body className="antialiased">
+				<ScrollReveal />
 				<Header />
-				<main>{children}</main>
+				<main className="min-h-screen">{children}</main>
 				<Footer />
 			</body>
 		</html>

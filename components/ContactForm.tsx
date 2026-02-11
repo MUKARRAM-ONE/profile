@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { Send, Loader2, CheckCircle2 } from "lucide-react";
 
 export default function ContactForm() {
   const [name, setName] = useState("");
@@ -11,7 +12,6 @@ export default function ContactForm() {
   function validate() {
     if (!name.trim()) return "Please enter your name.";
     if (!email.trim()) return "Please enter your email.";
-    // simple email check
     if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return "Please enter a valid email address.";
     if (!message.trim()) return "Please enter a message.";
     return null;
@@ -28,17 +28,18 @@ export default function ContactForm() {
     setStatus("sending");
 
     try {
-      // mailto fallback: open user's email client with prefilled data
       const subject = encodeURIComponent(`Contact from ${name}`);
       const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
-      const mailto = `mailto:${email}?subject=${subject}&body=${body}`;
-      // Try to open mailto - this will open user's email client
+      const mailto = `mailto:mukrram2003@gmail.com?subject=${subject}&body=${body}`;
+      
       window.location.href = mailto;
-      setStatus("sent");
-      // keep fields or reset
-      setName("");
-      setEmail("");
-      setMessage("");
+      
+      setTimeout(() => {
+        setStatus("sent");
+        setName("");
+        setEmail("");
+        setMessage("");
+      }, 1000);
     } catch (err) {
       console.error(err);
       setStatus("error");
@@ -46,58 +47,93 @@ export default function ContactForm() {
     }
   };
 
+  if (status === "sent") {
+    return (
+      <div className="p-12 rounded-[2.5rem] border border-green-100 dark:border-green-500/20 bg-green-50 dark:bg-green-500/5 text-center animate-fadeInUp">
+        <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center text-white mx-auto mb-6 shadow-lg shadow-green-500/20">
+          <CheckCircle2 size={32} />
+        </div>
+        <h3 className="text-2xl font-bold text-green-800 dark:text-green-400 mb-2">Message Ready!</h3>
+        <p className="text-green-700 dark:text-green-500/80 mb-8">
+          Your email client has been opened with your message. Just hit send there!
+        </p>
+        <button 
+          onClick={() => setStatus("idle")}
+          className="text-sm font-bold text-green-800 dark:text-green-400 hover:underline"
+        >
+          Send another message
+        </button>
+      </div>
+    );
+  }
+
   return (
-    <form onSubmit={handleSubmit} className="mt-8 max-w-xl mx-auto">
-      <div className="grid grid-cols-1 gap-4">
-        <label className="flex flex-col text-sm">
-          <span className="mb-1">Your name</span>
+    <form onSubmit={handleSubmit} className="space-y-6">
+      <div className="grid grid-cols-1 gap-6">
+        <div className="space-y-2">
+          <label className="text-xs font-bold text-slate-400 uppercase tracking-widest ml-1">
+            Full Name
+          </label>
           <input
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="border rounded px-3 py-2 bg-white dark:bg-gray-800 text-black dark:text-white"
-            placeholder="Full name"
+            className="w-full px-6 py-4 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 transition-all outline-none"
+            placeholder="Mukarram Razzaq"
             required
           />
-        </label>
+        </div>
 
-        <label className="flex flex-col text-sm">
-          <span className="mb-1">Email</span>
+        <div className="space-y-2">
+          <label className="text-xs font-bold text-slate-400 uppercase tracking-widest ml-1">
+            Email Address
+          </label>
           <input
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             type="email"
-            className="border rounded px-3 py-2 bg-white dark:bg-gray-800 text-black dark:text-white"
+            className="w-full px-6 py-4 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 transition-all outline-none"
             placeholder="you@example.com"
             required
           />
-        </label>
+        </div>
 
-        <label className="flex flex-col text-sm">
-          <span className="mb-1">Message</span>
+        <div className="space-y-2">
+          <label className="text-xs font-bold text-slate-400 uppercase tracking-widest ml-1">
+            Your Message
+          </label>
           <textarea
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            rows={6}
-            className="border rounded px-3 py-2 bg-white dark:bg-gray-800 text-black dark:text-white"
-            placeholder="How can I help you?"
+            rows={5}
+            className="w-full px-6 py-4 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 transition-all outline-none resize-none"
+            placeholder="Let's talk about..."
             required
           />
-        </label>
-
-        {error && <div className="text-red-600 text-sm">{error}</div>}
-
-        <div className="flex items-center gap-4">
-          <button
-            type="submit"
-            disabled={status === "sending"}
-            className="px-4 py-2 rounded bg-black text-white disabled:opacity-50"
-          >
-            {status === "sending" ? "Sending..." : "Send message"}
-          </button>
-
-          {status === "sent" && <div className="text-sm text-green-600">Message handled by your mail client.</div>}
-          {status === "error" && <div className="text-sm text-red-600">{error}</div>}
         </div>
+
+        {error && (
+          <div className="p-4 rounded-xl bg-red-500/5 border border-red-500/20 text-red-600 text-sm font-semibold animate-shake">
+            {error}
+          </div>
+        )}
+
+        <button
+          type="submit"
+          disabled={status === "sending"}
+          className="btn-primary w-full py-5 flex items-center justify-center gap-3 text-lg"
+        >
+          {status === "sending" ? (
+            <>
+              <Loader2 className="animate-spin" size={24} />
+              Preparing...
+            </>
+          ) : (
+            <>
+              <Send size={20} />
+              Send Message
+            </>
+          )}
+        </button>
       </div>
     </form>
   );

@@ -11,48 +11,57 @@ date?: string;
 
 export const projects: Project[] = [
 {
-slug: 'stellar-sync',
-title: 'Stellar Sync (example)',
-short: 'A real-time sync service for distributed notes and metadata.',
-long: `Stellar Sync is a distributed synchronization service built with TypeScript and WebSockets. It offers conflict-free replicated data types (CRDTs) for real-time collaboration, optimized for low-latency and offline-first workflows. Responsibilities: architectural design, TypeScript implementation, and performance tuning.`,
-tags: ['TypeScript','Realtime','CRDT'],
+slug: 'azure-disaster-response',
+title: 'Azure Disaster Response System',
+short: 'Cloud-based disaster response application using Azure services.',
+long: `Designed, developed, and deployed a cloud-based disaster response application using Microsoft Azure. Built and hosted the application using Azure Static Web Apps, Azure Functions, CosmosDB (CoreSQL), Auth0, JWT, and Bycript hashing. It demonstrates practical understanding of cloud computing concepts, scalability considerations, and real-world deployment workflows.`,
+tags: ['Azure', 'Node.js', 'CosmosDB', 'Auth0', 'Cloud'],
+link: 'https://blue-sand-0cbf47300.1.azurestaticapps.net/',
+date: '2024-12-01'
+},
+{
+slug: 'skintelli-ai-healthcare',
+title: 'Skintelli (AI Healthcare Project)',
+short: 'AI-driven skin disease analysis platform.',
+long: `Contributed as an open-source collaborator to Skintelli, an AI-driven skin disease analysis platform. Actively participated in collaborative development by working on Python-based components and improving integration of machine learning logic within the application.`,
+tags: ['Python', 'AI', 'Healthcare', 'Machine Learning'],
+link: 'https://github.com/MUKARRAM-ONE/Skintelli',
+date: '2025-01-15'
+},
+{
+slug: 'facial-emotion-recognition',
+title: 'Facial Emotion & Gender Recognition',
+short: 'Real-time facial analysis system using CNNs and OpenCV.',
+long: `Developed a real-time Facial Emotion and Gender Detection system using Convolutional Neural Networks (CNNs) and OpenCV. Trained the model in Google Colab with TensorFlow and PyTorch, achieving high accuracy through best-epoch selection and data preprocessing. Integrated a Streamlit-based interface for webcam and image-based predictions.`,
+tags: ['Python', 'CNN', 'OpenCV', 'TensorFlow', 'Streamlit'],
 link: '#',
-date: '2024-10-01'
+date: '2024-11-10'
+},
+{
+slug: 'ai-spec-driven-development',
+title: 'AI Spec-Driven Development',
+short: 'AI-driven software development workflow (Hackathon Project).',
+long: `Developed a fully AI-driven software development workflow that converts natural language specifications into structured documentation, tasks, and implementation plans. Built an automated system using Spec-Kit Plus commands to generate modules, chapter specifications, project plans, and a complete Docusaurus documentation site.`,
+tags: ['AI', 'Automation', 'Spec-Kit Plus', 'Docusaurus'],
+link: '#',
+date: '2025-02-01'
+},
+{
+slug: 'ocr-document-analysis',
+title: 'OCR-Based Document Analysis',
+short: 'Multilingual OCR system using Python and PyTorch.',
+long: `Developed a multilingual OCR system using Python and PyTorch that performs document layout analysis and extracts text with high accuracy. Conducted experiments and visualizations in a Google Colab notebook, demonstrating end-to-end OCR pipeline capabilities and performance evaluation.`,
+tags: ['Python', 'PyTorch', 'OCR', 'Computer Vision'],
+link: '#',
+date: '2024-09-20'
 },
 {
 slug: 'portfolio-website',
-title: 'Portfolio Website (this site)',
+title: 'Portfolio Website',
 short: 'Next.js + TypeScript + Tailwind portfolio site.',
 long: `A fast, accessible portfolio built with Next.js App Router, TypeScript and Tailwind. Focus on SEO, minimalism and performance. Includes project pages and blog posts authored in a small data layer.`,
 tags: ['Next.js','TypeScript','Tailwind'],
 link: 'https://www.mukarramrazzaq.me/',
 date: '2025-06-01'
-},
-{
-slug: 'quantum-cart',
-title: 'QuantumCart E-Commerce Platform',
-short: 'AI-powered e-commerce with personalized product recommendations.',
-long: `QuantumCart is an intelligent e-commerce platform that uses machine learning to deliver personalized shopping experiences. Features include real-time inventory management, AI-driven recommendations, secure payment processing with Stripe, and an admin dashboard for order management. Built with React frontend, Node.js backend, and Python ML microservices.`,
-tags: ['React', 'Node.js', 'Python', 'Machine Learning', 'Stripe'],
-link: '#',
-date: '2024-08-15'
-},
-{
-slug: 'health-hub',
-title: 'HealthHub - Fitness Tracking App',
-short: 'Mobile app for fitness goals and trainer connections.',
-long: `HealthHub is a cross-platform mobile application built with React Native that helps users track fitness goals, connect with certified trainers, and monitor progress through real-time data integration. Features include Firebase authentication, real-time workout updates, trainer messaging, and integration with Google Fit API and Apple HealthKit for comprehensive health tracking.`,
-tags: ['React Native', 'Firebase', 'GraphQL', 'Google Fit API'],
-link: '#',
-date: '2024-06-20'
-},
-{
-slug: 'cloudnative-analytics',
-title: 'CloudNative Analytics Dashboard',
-short: 'Real-time analytics platform for distributed cloud systems.',
-long: `A scalable analytics dashboard for monitoring cloud infrastructure and application metrics in real-time. Built with Next.js for the frontend and Node.js microservices on the backend. Features include real-time data streaming with WebSockets, custom metrics visualization, alerting system, and integration with AWS CloudWatch and Prometheus for comprehensive system monitoring.`,
-tags: ['Next.js', 'Node.js', 'AWS', 'Prometheus', 'Docker'],
-link: '#',
-date: '2024-05-10'
 }
 ];
