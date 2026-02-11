@@ -99,10 +99,15 @@ export default function Education() {
                     <div className="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-600 group-hover:scale-110 transition-transform">
                       <Cpu size={24} />
                     </div>
-                    <div>
-                        <h4 className="font-bold text-lg mb-1">IT Specialist: Python</h4>
-                        <p className="text-sm text-slate-500 font-medium">Pearson Certified • 2025</p>
-                    </div>
+                    <a 
+                      href="https://www.credly.com/badges/769c9262-d450-4c9d-a068-b608a2ec23d6/public_url"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 cursor-pointer group/link"
+                    >
+                        <h4 className="font-bold text-lg mb-1 text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 transition-colors">IT Specialist: Python</h4>
+                        <p className="text-sm text-slate-500 font-medium group-hover/link:text-slate-600 dark:group-hover/link:text-slate-400 transition-colors">Pearson Certified • 2025</p>
+                    </a>
                 </div>
             </div>
             <div className="reveal reveal-right p-8 rounded-[2rem] border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm">
