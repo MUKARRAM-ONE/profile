@@ -16,7 +16,7 @@ title: 'Azure Disaster Response System',
 short: 'Cloud-based disaster response application using Azure services.',
 long: `Designed, developed, and deployed a cloud-based disaster response application using Microsoft Azure. Built and hosted the application using Azure Static Web Apps, Azure Functions, CosmosDB (CoreSQL), Auth0, JWT, and Bycript hashing. It demonstrates practical understanding of cloud computing concepts, scalability considerations, and real-world deployment workflows.`,
 tags: ['Azure', 'Node.js', 'CosmosDB', 'Auth0', 'Cloud'],
-link: 'https://blue-sand-0cbf47300.1.azurestaticapps.net/',
+link: 'https://blue-sand-0ebf47300.1.azurestaticapps.net/',
 date: '2024-12-01'
 },
 {
@@ -25,7 +25,7 @@ title: 'Skintelli (AI Healthcare Project)',
 short: 'AI-driven skin disease analysis platform.',
 long: `Contributed as an open-source collaborator to Skintelli, an AI-driven skin disease analysis platform. Actively participated in collaborative development by working on Python-based components and improving integration of machine learning logic within the application.`,
 tags: ['Python', 'AI', 'Healthcare', 'Machine Learning'],
-link: 'https://github.com/MUKARRAM-ONE/Skintelli',
+link: 'https://github.com/Muskan-zehra12/Skintelli',
 date: '2025-01-15'
 },
 {
@@ -34,7 +34,7 @@ title: 'Facial Emotion & Gender Recognition',
 short: 'Real-time facial analysis system using CNNs and OpenCV.',
 long: `Developed a real-time Facial Emotion and Gender Detection system using Convolutional Neural Networks (CNNs) and OpenCV. Trained the model in Google Colab with TensorFlow and PyTorch, achieving high accuracy through best-epoch selection and data preprocessing. Integrated a Streamlit-based interface for webcam and image-based predictions.`,
 tags: ['Python', 'CNN', 'OpenCV', 'TensorFlow', 'Streamlit'],
-link: '#',
+link: 'https://github.com/MUKARRAM-ONE/Computer-Vision/tree/main/face-emotion-detector',
 date: '2024-11-10'
 },
 {
@@ -43,7 +43,7 @@ title: 'AI Spec-Driven Development',
 short: 'AI-driven software development workflow (Hackathon Project).',
 long: `Developed a fully AI-driven software development workflow that converts natural language specifications into structured documentation, tasks, and implementation plans. Built an automated system using Spec-Kit Plus commands to generate modules, chapter specifications, project plans, and a complete Docusaurus documentation site.`,
 tags: ['AI', 'Automation', 'Spec-Kit Plus', 'Docusaurus'],
-link: '#',
+link: 'https://mukarram-one.github.io/AI-Robotic-Book/',
 date: '2025-02-01'
 },
 {
@@ -52,7 +52,7 @@ title: 'OCR-Based Document Analysis',
 short: 'Multilingual OCR system using Python and PyTorch.',
 long: `Developed a multilingual OCR system using Python and PyTorch that performs document layout analysis and extracts text with high accuracy. Conducted experiments and visualizations in a Google Colab notebook, demonstrating end-to-end OCR pipeline capabilities and performance evaluation.`,
 tags: ['Python', 'PyTorch', 'OCR', 'Computer Vision'],
-link: '#',
+link: '',
 date: '2024-09-20'
 },
 {
