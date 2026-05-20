@@ -81,7 +81,7 @@ export default function Header() {
 				{/* Right area */}
 				<div className="flex items-center gap-3">
 					<a 
-						href="/Mukarram_Razzaq_resume.pdf" 
+						href="/MukarramRazzaqResume.pdf" 
 						className="btn-primary py-2 px-4 text-sm hidden lg:flex items-center gap-2"
 					>
 						<FileDown size={16} />
